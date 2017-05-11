@@ -10,7 +10,7 @@ Let's get some practice with writing classes, constructor functions, and methods
 
 We're going to create a Zoo. Our zoo has lots of different animals, many of which share various properties and actions. We will have a base Animal with some shared functionality, then a few species of animals with specific functionality. Some examples are below, but you can use any species you wish, so long as you implement shared and specific functionality at the Animal and species levels respectively.
 
-1. Create an Animal class with a constructor
+* Create an Animal class with a constructor
   * All Animals have a name and date of birth
 
   * An Animals name might change, but not its date of birth - thus you must create a get method for the date of birth so it may only be retrieved, not changed!
@@ -19,7 +19,7 @@ We're going to create a Zoo. Our zoo has lots of different animals, many of whic
 
   * Create a toString() method which prints out the animals name and date of birth
 
-2. Create two specific species of Animal which extend the Animal class
+* Create two specific species of Animal which extend the Animal class
   * Specific species constructors MUST use the parent constructor
 
   * Each species class must have a static method which returns the scientific name of that species
