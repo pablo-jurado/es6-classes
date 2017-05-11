@@ -3,11 +3,13 @@ class Animal {
   constructor (name, dob = new Date()) {
     this.name = name
     this.dob = new Date(dob)
+    this.babysNum = 0
   }
   setName (newName) {
     this.name = newName
   }
   getDateOfBirth () {
+    this.babysNum += 1
     return this.dob.toDateString()
   }
   getAge () {
@@ -26,7 +28,7 @@ class Animal {
 class Reptile extends Animal {
   constructor (name, dob, scienceName = 'unknow science name') {
     super(name, dob)
-    scienceName = this.scienceName
+    this.scienceName = scienceName
   }
   static getScienceName () {
     return this.scienceName
@@ -46,7 +48,8 @@ class Reptile extends Animal {
 class Amphibian extends Animal {
   constructor (name, dob, scienceName = 'unknow science name') {
     super(name, dob)
-    scienceName = this.scienceName
+    this.scienceName = scienceName
+    this.babysNum = 0
   }
   static getScienceName () {
     return this.scienceName
@@ -60,7 +63,7 @@ class Amphibian extends Animal {
     return eggsArr
   }
   howManyBabys () {
-    if (this.hasOwnProperty('babysNum')) return this.babysNum
+    return this.babysNum
   }
   toString () {
     return super.toString() + ' and the spieces is Amphibian'
