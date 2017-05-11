@@ -74,5 +74,3 @@ let gecko = new Amphibian()
 let eggs = gecko.getEggs(['gecky', 'geckin', 'geckito'])
 
 console.log(gecko.toString())
-
-// All species must re-implement the toString() method to print out what species it is
