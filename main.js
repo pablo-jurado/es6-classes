@@ -16,7 +16,7 @@ class Animal {
     return currentYear - birthYear
   }
   toString () {
-    console.log(`This Animal name is ${this.name} and is ${this.getAge()} years old.`)
+    return `This Animal name is ${this.name} and is ${this.getAge()} years old.`
   }
 }
 
@@ -37,6 +37,9 @@ class Reptile extends Animal {
   feedMe (food) {
     if (food === 'meat') return true
     if (food === 'veggies') return false
+  }
+  toString () {
+    return super.toString() + ' and the spieces is Reptile'
   }
 }
 
@@ -59,6 +62,9 @@ class Amphibian extends Animal {
   howManyBabys () {
     if (this.hasOwnProperty('babysNum')) return this.babysNum
   }
+  toString () {
+    return super.toString() + ' and the spieces is Amphibian'
+  }
 }
 
 let chameleon = new Reptile('django', '12/14/1985')
@@ -66,5 +72,7 @@ let chameleonBaby = chameleon.getBaby('djangoBabyBoy')
 
 let gecko = new Amphibian()
 let eggs = gecko.getEggs(['gecky', 'geckin', 'geckito'])
+
+console.log(gecko.toString())
 
 // All species must re-implement the toString() method to print out what species it is
